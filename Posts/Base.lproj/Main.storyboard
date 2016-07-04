@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Posts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="323" y="321"/>
         </scene>
-        <!--View Controller-->
+        <!--My View Controller-->
         <scene sceneID="ttd-Jv-R8o">
             <objects>
-                <viewController id="zuP-Ii-QDy" sceneMemberID="viewController">
+                <viewController id="zuP-Ii-QDy" customClass="MyViewController" customModule="Posts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="teX-34-9Tu"/>
                         <viewControllerLayoutGuide type="bottom" id="hgn-XG-p9A"/>
@@ -34,8 +35,52 @@
                     <view key="view" contentMode="scaleToFill" id="7wp-Bb-qe9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Sya-vr-aTQ">
+                                <rect key="frame" x="20" y="113" width="560" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BDD-ld-KKv">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sG6-Fz-a3d">
+                                        <rect key="frame" x="0.0" y="45" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpp-Gg-vzO">
+                                        <rect key="frame" x="0.0" y="90" width="560" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="makePost:" destination="zuP-Ii-QDy" eventType="touchUpInside" id="Uzt-L4-9Om"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sG6-Fz-a3d" firstAttribute="leading" secondItem="Sya-vr-aTQ" secondAttribute="leading" id="X7I-wN-4hf"/>
+                                    <constraint firstAttribute="trailing" secondItem="sG6-Fz-a3d" secondAttribute="trailing" id="chk-cU-wGx"/>
+                                    <constraint firstAttribute="trailing" secondItem="gpp-Gg-vzO" secondAttribute="trailing" id="lCq-QG-U4a"/>
+                                    <constraint firstItem="BDD-ld-KKv" firstAttribute="leading" secondItem="Sya-vr-aTQ" secondAttribute="leading" id="lSq-ho-JAq"/>
+                                    <constraint firstAttribute="trailing" secondItem="BDD-ld-KKv" secondAttribute="trailing" id="vOk-qe-jSU"/>
+                                    <constraint firstItem="gpp-Gg-vzO" firstAttribute="leading" secondItem="Sya-vr-aTQ" secondAttribute="leading" id="xEJ-aE-qZ7"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sya-vr-aTQ" firstAttribute="top" secondItem="teX-34-9Tu" secondAttribute="bottom" constant="93" id="Njj-St-xMp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sya-vr-aTQ" secondAttribute="trailing" id="VoX-6W-Iv4"/>
+                            <constraint firstItem="Sya-vr-aTQ" firstAttribute="leading" secondItem="7wp-Bb-qe9" secondAttribute="leadingMargin" id="vJ3-Bs-vAO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descTextField" destination="sG6-Fz-a3d" id="Fiv-ir-vwU"/>
+                        <outlet property="tilteTextfield" destination="BDD-ld-KKv" id="AFM-1G-9Jr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydx-oF-NkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
