@@ -21,8 +21,8 @@ class MyViewController: UIViewController {
     @IBAction func makePost(sender: AnyObject) {
         if let postTitle = tilteTextfield.text, postText = descTextField.text {
             let post = Posts(paramTitle: postTitle, paramDesc: postText)
-            
-            
+            DataService.instance.addPosts(post)
+            dismissViewControllerAnimated(true, completion: nil)
         }
     }
 

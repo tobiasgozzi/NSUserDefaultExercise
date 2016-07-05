@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D00F3A51D2AD5D3002C1BDB /* PostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D00F3A41D2AD5D3002C1BDB /* PostsCell.swift */; };
 		1D7D0E331D2A3CEC00887C5A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D0E321D2A3CEC00887C5A /* DataService.swift */; };
 		1D9452641D29B2F100CB3FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9452631D29B2F100CB3FBF /* AppDelegate.swift */; };
 		1D9452661D29B2F100CB3FBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9452651D29B2F100CB3FBF /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D00F3A41D2AD5D3002C1BDB /* PostsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsCell.swift; sourceTree = "<group>"; };
 		1D7D0E321D2A3CEC00887C5A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		1D9452601D29B2F100CB3FBF /* Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D9452631D29B2F100CB3FBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,12 +64,13 @@
 		1D9452621D29B2F100CB3FBF /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				1D7D0E321D2A3CEC00887C5A /* DataService.swift */,
 				1D9452631D29B2F100CB3FBF /* AppDelegate.swift */,
 				1D9452651D29B2F100CB3FBF /* ViewController.swift */,
 				1D9452671D29B2F100CB3FBF /* Main.storyboard */,
-				1D7D0E321D2A3CEC00887C5A /* DataService.swift */,
 				1D9452781D29B30400CB3FBF /* MyViewController.swift */,
 				1D94527A1D29B31600CB3FBF /* Post.swift */,
+				1D00F3A41D2AD5D3002C1BDB /* PostsCell.swift */,
 				1D94526D1D29B2F100CB3FBF /* Assets.xcassets */,
 				1D94526F1D29B2F100CB3FBF /* LaunchScreen.storyboard */,
 				1D9452721D29B2F100CB3FBF /* Info.plist */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D94526C1D29B2F100CB3FBF /* Posts.xcdatamodeld in Sources */,
+				1D00F3A51D2AD5D3002C1BDB /* PostsCell.swift in Sources */,
 				1D9452661D29B2F100CB3FBF /* ViewController.swift in Sources */,
 				1D9452791D29B30400CB3FBF /* MyViewController.swift in Sources */,
 				1D7D0E331D2A3CEC00887C5A /* DataService.swift in Sources */,
